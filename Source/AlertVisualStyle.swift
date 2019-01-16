@@ -32,6 +32,10 @@ open class AlertVisualStyle: NSObject {
     @objc
     public var actionViewSize: CGSize
 
+    /// Offset between bottom action view and contentView with other buttons.
+    @objc
+    public var bottomActionViewOffset: CGFloat = 8
+
     /// The color of an action when the user is tapping it
     @objc
     public var actionHighlightColor = UIColor(white: 0.8, alpha: 0.7)

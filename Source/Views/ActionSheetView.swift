@@ -9,6 +9,8 @@ final class ActionSheetView: UIView, AlertControllerViewRepresentable {
     @IBOutlet private var cancelLabel: UILabel!
     @IBOutlet private var cancelButton: UIButton!
     @IBOutlet private var collectionViewHeightConstraint: NSLayoutConstraint!
+
+    @IBOutlet private var bottomButtonOffset: NSLayoutConstraint!
     @IBOutlet private var cancelHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var titleWidthConstraint: NSLayoutConstraint!
 
@@ -111,6 +113,8 @@ final class ActionSheetView: UIView, AlertControllerViewRepresentable {
         let cancelButtonBackground = UIImage.image(with: self.visualStyle.actionHighlightColor)
         self.cancelButton.setBackgroundImage(cancelButtonBackground, for: .highlighted)
         self.cancelHeightConstraint.constant = self.visualStyle.actionViewSize.height
+
+        self.bottomButtonOffset.constant = self.visualStyle.bottomActionViewOffset
     }
 
     private func setUpContentView() {
